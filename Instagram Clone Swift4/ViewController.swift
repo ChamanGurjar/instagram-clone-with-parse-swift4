@@ -25,6 +25,14 @@ class ViewController: UIViewController {
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if PFUser.current() != nil {
+            performSegue(withIdentifier: "gotoMainScreen", sender: self)
+        }
+    }
+    
     
     
     @IBAction func signUpOrLoginActivity(_ sender: UIButton) {
@@ -49,6 +57,7 @@ class ViewController: UIViewController {
                 self.showAlert(title: "Error", message: error.localizedDescription)
                 print(error.localizedDescription)
             } else {
+                self.performSegue(withIdentifier: "gotoMainScreen", sender: self)
                 print("\(self.emailIdTF.text!) signedUpSuccessfully")
             }
         }
@@ -60,6 +69,7 @@ class ViewController: UIViewController {
                 print(error.localizedDescription)
                 self.showAlert(title: "Error", message: error.localizedDescription)
             } else {
+                self.performSegue(withIdentifier: "gotoMainScreen", sender: self)
                 print(user ?? "No User Found")
             }
         }
