@@ -139,6 +139,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Users" id="2My-hC-Azb">
+                        <barButtonItem key="leftBarButtonItem" title="Post" id="fJG-UJ-nln">
+                            <connections>
+                                <segue destination="Xos-Tz-Fhk" kind="show" id="tYg-Fb-DdX"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Logout" id="0uX-li-097">
                             <connections>
                                 <action selector="logoutUser:" destination="bH2-Sj-KIM" id="MQj-cD-LUM"/>
@@ -152,6 +157,70 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="in6-oQ-DAV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1222" y="107"/>
+        </scene>
+        <!--Post Image-->
+        <scene sceneID="PW6-nO-idp">
+            <objects>
+                <viewController title="Post Image" id="Xos-Tz-Fhk" customClass="PostViewController" customModule="Instagram_Clone_Swift4" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="otS-no-OBH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Nx-LT-qz3">
+                                <rect key="frame" x="16" y="104" width="343" height="259"/>
+                                <color key="backgroundColor" red="0.69184248096446699" green="0.69184248096446699" blue="0.69184248096446699" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="8vq-gd-3MT"/>
+                                    <constraint firstAttribute="height" constant="259" id="wP4-3g-wtf"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add a comment" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UQl-Lf-CzF">
+                                <rect key="frame" x="16" y="452" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xO7-ef-LqI">
+                                <rect key="frame" x="40" y="509" width="295" height="30"/>
+                                <state key="normal" title="POST"/>
+                                <connections>
+                                    <action selector="postImage:" destination="Xos-Tz-Fhk" eventType="touchUpInside" id="M6F-ju-hsk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6t7-6M-ZDZ">
+                                <rect key="frame" x="16" y="392" width="343" height="30"/>
+                                <state key="normal" title="Choose an image..."/>
+                                <connections>
+                                    <action selector="chooseImage:" destination="Xos-Tz-Fhk" eventType="touchUpInside" id="4Ve-rf-NjM"/>
+                                    <action selector="postImage:" destination="Xos-Tz-Fhk" eventType="touchUpInside" id="emk-T8-hwj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZVe-Ao-5PD" firstAttribute="trailing" secondItem="xO7-ef-LqI" secondAttribute="trailing" constant="40" id="6lF-ql-UGb"/>
+                            <constraint firstItem="ZVe-Ao-5PD" firstAttribute="trailing" secondItem="5Nx-LT-qz3" secondAttribute="trailing" constant="16" id="AX3-H1-afV"/>
+                            <constraint firstItem="xO7-ef-LqI" firstAttribute="top" secondItem="UQl-Lf-CzF" secondAttribute="bottom" constant="27" id="ArG-2s-JZY"/>
+                            <constraint firstItem="5Nx-LT-qz3" firstAttribute="top" secondItem="ZVe-Ao-5PD" secondAttribute="top" constant="40" id="BzL-a3-U7G"/>
+                            <constraint firstItem="6t7-6M-ZDZ" firstAttribute="leading" secondItem="5Nx-LT-qz3" secondAttribute="leading" id="frg-L7-tC3"/>
+                            <constraint firstItem="6t7-6M-ZDZ" firstAttribute="trailing" secondItem="5Nx-LT-qz3" secondAttribute="trailing" id="kyI-7t-2qb"/>
+                            <constraint firstItem="6t7-6M-ZDZ" firstAttribute="top" secondItem="5Nx-LT-qz3" secondAttribute="bottom" constant="29" id="l3z-vw-ybF"/>
+                            <constraint firstItem="UQl-Lf-CzF" firstAttribute="trailing" secondItem="5Nx-LT-qz3" secondAttribute="trailing" id="npa-1v-NbU"/>
+                            <constraint firstItem="xO7-ef-LqI" firstAttribute="leading" secondItem="ZVe-Ao-5PD" secondAttribute="leading" constant="40" id="o5w-Jx-YjR"/>
+                            <constraint firstItem="UQl-Lf-CzF" firstAttribute="leading" secondItem="5Nx-LT-qz3" secondAttribute="leading" id="tWf-pW-s8V"/>
+                            <constraint firstItem="5Nx-LT-qz3" firstAttribute="leading" secondItem="ZVe-Ao-5PD" secondAttribute="leading" constant="16" id="uR5-DG-Fe9"/>
+                            <constraint firstItem="UQl-Lf-CzF" firstAttribute="top" secondItem="6t7-6M-ZDZ" secondAttribute="bottom" constant="30" id="vOR-aA-hOL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZVe-Ao-5PD"/>
+                    </view>
+                    <connections>
+                        <outlet property="commentTF" destination="UQl-Lf-CzF" id="Ds2-eP-96Y"/>
+                        <outlet property="postImageView" destination="5Nx-LT-qz3" id="Pdv-LE-JwD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g7b-AN-08M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1900" y="108.39580209895054"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="O29-2z-06U">
