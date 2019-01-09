@@ -14,6 +14,7 @@ class PostViewController: UIViewController, UINavigationControllerDelegate, UIIm
     @IBOutlet private weak var postImageView: UIImageView!
     @IBOutlet weak var commentTF: UITextField!
     
+    private let activityIndicatior = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,10 +46,15 @@ class PostViewController: UIViewController, UINavigationControllerDelegate, UIIm
             post["comment"] = commentTF.text!
             
             if let imageData = image.jpegData(compressionQuality: 1) {
+                
+                showActivityIndicator()
+                
                 let imageFile = PFFile(name: "image.png", data: imageData)
                 post["imageFile"] = imageFile
                 
                 post.saveInBackground { (success, err) in
+                    self.activityIndicatior.stopAnimating()
+                    UIApplication.shared.endIgnoringInteractionEvents()
                     if success {
                         self.showAlert(title: "Hurrah, Success", message: "Your image has been posted successfully")
                         self.commentTF.text = ""
@@ -61,6 +67,15 @@ class PostViewController: UIViewController, UINavigationControllerDelegate, UIIm
         }
     }
     
+    private func showActivityIndicator() {
+        
+        activityIndicatior.center = self.view.center
+        activityIndicatior.hidesWhenStopped = true
+        activityIndicatior.style = .gray
+        view.addSubview(activityIndicatior)
+        activityIndicatior.startAnimating()
+        UIApplication.shared.beginIgnoringInteractionEvents()
+    }
     
     private func showAlert(title: String,  message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
