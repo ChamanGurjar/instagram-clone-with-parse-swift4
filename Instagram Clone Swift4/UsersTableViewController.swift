@@ -14,14 +14,19 @@ class UsersTableViewController: UITableViewController {
     private var users = Array<String>() //[String]()
     private var objectIds = Array<String>()  //[String]()
     private var isFollowing = Dictionary<String, Bool>()  //[String: Bool]()
+    private let refresher = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        refresher.attributedTitle = NSAttributedString(string: "Pull To Refresh")
+        refresher.addTarget(self, action: #selector(fetchUsersFromParse), for: .valueChanged)
+        tableView.addSubview(refresher)
+        
         fetchUsersFromParse()
     }
     
-    private func fetchUsersFromParse() {
+    @objc private func fetchUsersFromParse() {
         let query = PFUser.query()
         query?.whereKey("username", notEqualTo: PFUser.current()?.username)
         query?.findObjectsInBackground(block: { (fetchedUsers, err) in
@@ -40,9 +45,9 @@ class UsersTableViewController: UITableViewController {
                     }
                 }
                 
-                Timer.scheduledTimer(withTimeInterval: 3, repeats: false, block: { (timer) in
-                    self.tableView.reloadData()
-                })
+                //                Timer.scheduledTimer(withTimeInterval: 3, repeats: false, block: { (timer) in
+                //                    self.tableView.reloadData()
+                //                })
                 //                self.tableView.reloadData()
                 //                print("Reloading Table")
             }
@@ -62,6 +67,11 @@ class UsersTableViewController: UITableViewController {
                 } else {
                     print("\(userId) Following and \(self.isFollowing.count)")
                     self.isFollowing[userId] = true
+                }
+                
+                if self.users.count == self.isFollowing.count {
+                    self.tableView.reloadData()
+                    self.refresher.endRefreshing()
                 }
             }
         })
