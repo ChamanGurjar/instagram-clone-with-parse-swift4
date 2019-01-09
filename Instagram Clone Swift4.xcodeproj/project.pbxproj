@@ -12,7 +12,7 @@
 		67466F3921E2105C001B3278 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67466F3721E2105C001B3278 /* Main.storyboard */; };
 		67466F3B21E21060001B3278 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67466F3A21E21060001B3278 /* Assets.xcassets */; };
 		67466F3E21E21060001B3278 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67466F3C21E21060001B3278 /* LaunchScreen.storyboard */; };
-		67CD51EB21E4CBFB006B2926 /* MainScreenTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CD51EA21E4CBFB006B2926 /* MainScreenTableViewController.swift */; };
+		67CD51EB21E4CBFB006B2926 /* UsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CD51EA21E4CBFB006B2926 /* UsersTableViewController.swift */; };
 		6E48831D9A57FA1734C0B9B0 /* Pods_Instagram_Clone_Swift4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CDCE866C8A5CF60CCBD9F6E /* Pods_Instagram_Clone_Swift4.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,7 +25,7 @@
 		67466F3A21E21060001B3278 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		67466F3D21E21060001B3278 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		67466F3F21E21060001B3278 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		67CD51EA21E4CBFB006B2926 /* MainScreenTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenTableViewController.swift; sourceTree = "<group>"; };
+		67CD51EA21E4CBFB006B2926 /* UsersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewController.swift; sourceTree = "<group>"; };
 		77A18FBD4A0E092009059110 /* Pods-Instagram Clone Swift4.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram Clone Swift4.debug.xcconfig"; path = "Target Support Files/Pods-Instagram Clone Swift4/Pods-Instagram Clone Swift4.debug.xcconfig"; sourceTree = "<group>"; };
 		ECD75C78E16055446FBAFDEC /* Pods-Instagram Clone Swift4.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram Clone Swift4.release.xcconfig"; path = "Target Support Files/Pods-Instagram Clone Swift4/Pods-Instagram Clone Swift4.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,11 +74,11 @@
 			children = (
 				67466F3321E2105B001B3278 /* AppDelegate.swift */,
 				67466F3521E2105C001B3278 /* ViewController.swift */,
+				67CD51EA21E4CBFB006B2926 /* UsersTableViewController.swift */,
 				67466F3721E2105C001B3278 /* Main.storyboard */,
 				67466F3A21E21060001B3278 /* Assets.xcassets */,
 				67466F3C21E21060001B3278 /* LaunchScreen.storyboard */,
 				67466F3F21E21060001B3278 /* Info.plist */,
-				67CD51EA21E4CBFB006B2926 /* MainScreenTableViewController.swift */,
 			);
 			path = "Instagram Clone Swift4";
 			sourceTree = "<group>";
@@ -213,7 +213,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67CD51EB21E4CBFB006B2926 /* MainScreenTableViewController.swift in Sources */,
+				67CD51EB21E4CBFB006B2926 /* UsersTableViewController.swift in Sources */,
 				67466F3621E2105C001B3278 /* ViewController.swift in Sources */,
 				67466F3421E2105C001B3278 /* AppDelegate.swift in Sources */,
 			);

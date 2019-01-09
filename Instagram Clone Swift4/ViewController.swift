@@ -31,6 +31,8 @@ class ViewController: UIViewController {
         if PFUser.current() != nil {
             performSegue(withIdentifier: "gotoMainScreen", sender: self)
         }
+        
+        self.navigationController?.navigationBar.isHidden = true
     }
     
     
