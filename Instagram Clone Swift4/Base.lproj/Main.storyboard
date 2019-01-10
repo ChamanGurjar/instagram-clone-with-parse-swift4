@@ -139,11 +139,18 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Users" id="2My-hC-Azb">
-                        <barButtonItem key="leftBarButtonItem" title="Post" id="fJG-UJ-nln">
-                            <connections>
-                                <segue destination="Xos-Tz-Fhk" kind="show" id="tYg-Fb-DdX"/>
-                            </connections>
-                        </barButtonItem>
+                        <leftBarButtonItems>
+                            <barButtonItem title="Post" id="fJG-UJ-nln">
+                                <connections>
+                                    <segue destination="Xos-Tz-Fhk" kind="show" id="tYg-Fb-DdX"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Feed" id="ftt-Ei-A7N">
+                                <connections>
+                                    <segue destination="jmB-Q9-mzs" kind="show" id="dM3-9D-aub"/>
+                                </connections>
+                            </barButtonItem>
+                        </leftBarButtonItems>
                         <barButtonItem key="rightBarButtonItem" title="Logout" id="0uX-li-097">
                             <connections>
                                 <action selector="logoutUser:" destination="bH2-Sj-KIM" id="MQj-cD-LUM"/>
@@ -222,6 +229,77 @@
             </objects>
             <point key="canvasLocation" x="1900" y="108.39580209895054"/>
         </scene>
+        <!--Feed Table View Controller-->
+        <scene sceneID="QPR-po-497">
+            <objects>
+                <tableViewController id="jmB-Q9-mzs" customClass="FeedTableViewController" customModule="Instagram_Clone_Swift4" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="uYd-A5-PwN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedTableViewCell" rowHeight="259" id="Qpj-nZ-98H" customClass="FeedTableViewCell" customModule="Instagram_Clone_Swift4" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="259"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Qpj-nZ-98H" id="9lJ-Wc-DSl">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="258.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ML and AI.png" translatesAutoresizingMaskIntoConstraints="NO" id="8at-MI-lWs">
+                                            <rect key="frame" x="41" y="21" width="293" height="128"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="128" id="edH-LN-BYk"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wow, Wonderful image uploaded" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zZ2-qk-F95">
+                                            <rect key="frame" x="16" y="173" width="343" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20" id="NLd-Ke-prf"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chaman Gurjar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BCr-a8-2aA">
+                                            <rect key="frame" x="16" y="201" width="343" height="25"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="25" id="w66-jX-hYb"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="zZ2-qk-F95" firstAttribute="leading" secondItem="9lJ-Wc-DSl" secondAttribute="leadingMargin" id="1ZF-ar-fru"/>
+                                        <constraint firstItem="zZ2-qk-F95" firstAttribute="trailing" secondItem="9lJ-Wc-DSl" secondAttribute="trailingMargin" id="892-es-ub9"/>
+                                        <constraint firstItem="8at-MI-lWs" firstAttribute="top" secondItem="9lJ-Wc-DSl" secondAttribute="topMargin" constant="10" id="Ba1-oT-eRW"/>
+                                        <constraint firstItem="BCr-a8-2aA" firstAttribute="leading" secondItem="9lJ-Wc-DSl" secondAttribute="leadingMargin" id="OlI-Pd-RQ0"/>
+                                        <constraint firstItem="BCr-a8-2aA" firstAttribute="trailing" secondItem="9lJ-Wc-DSl" secondAttribute="trailingMargin" id="ZeZ-35-2ym"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="8at-MI-lWs" secondAttribute="trailing" constant="25" id="if7-Hj-YbD"/>
+                                        <constraint firstItem="BCr-a8-2aA" firstAttribute="top" secondItem="zZ2-qk-F95" secondAttribute="bottom" constant="8" id="qM7-tY-dzb"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="BCr-a8-2aA" secondAttribute="bottom" constant="25" id="tPU-cp-e3L"/>
+                                        <constraint firstItem="zZ2-qk-F95" firstAttribute="top" secondItem="8at-MI-lWs" secondAttribute="bottom" constant="24" id="vWa-DS-ffA"/>
+                                        <constraint firstItem="8at-MI-lWs" firstAttribute="leading" secondItem="9lJ-Wc-DSl" secondAttribute="leadingMargin" constant="25" id="wpD-ms-2Kh"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="comment" destination="zZ2-qk-F95" id="PKG-mY-6Lz"/>
+                                    <outlet property="postedImge" destination="8at-MI-lWs" id="Ux6-BW-1Uz"/>
+                                    <outlet property="userInfo" destination="BCr-a8-2aA" id="h8o-hU-8rk"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="jmB-Q9-mzs" id="cto-GN-4ef"/>
+                            <outlet property="delegate" destination="jmB-Q9-mzs" id="eBb-eJ-aH3"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QnU-UG-oCm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2568.8000000000002" y="102.99850074962519"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="O29-2z-06U">
             <objects>
@@ -239,4 +317,7 @@
             <point key="canvasLocation" x="530" y="108"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ML and AI.png" width="1080" height="687"/>
+    </resources>
 </document>

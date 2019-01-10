@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6713CBC421E70B8900FD70D3 /* ML and AI.png in Resources */ = {isa = PBXBuildFile; fileRef = 6713CBC321E70B8900FD70D3 /* ML and AI.png */; };
+		6713CBC621E70C9800FD70D3 /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6713CBC521E70C9800FD70D3 /* FeedTableViewController.swift */; };
+		6713CBC821E70CA600FD70D3 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6713CBC721E70CA600FD70D3 /* FeedTableViewCell.swift */; };
 		67466F3421E2105C001B3278 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67466F3321E2105B001B3278 /* AppDelegate.swift */; };
 		67466F3621E2105C001B3278 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67466F3521E2105C001B3278 /* ViewController.swift */; };
 		67466F3921E2105C001B3278 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67466F3721E2105C001B3278 /* Main.storyboard */; };
@@ -19,6 +22,9 @@
 
 /* Begin PBXFileReference section */
 		0CDCE866C8A5CF60CCBD9F6E /* Pods_Instagram_Clone_Swift4.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Instagram_Clone_Swift4.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6713CBC321E70B8900FD70D3 /* ML and AI.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ML and AI.png"; sourceTree = "<group>"; };
+		6713CBC521E70C9800FD70D3 /* FeedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewController.swift; sourceTree = "<group>"; };
+		6713CBC721E70CA600FD70D3 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		67466F3021E2105B001B3278 /* Instagram Clone Swift4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Instagram Clone Swift4.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		67466F3321E2105B001B3278 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67466F3521E2105C001B3278 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,8 +84,11 @@
 				67466F3321E2105B001B3278 /* AppDelegate.swift */,
 				67466F3521E2105C001B3278 /* ViewController.swift */,
 				67CD51EA21E4CBFB006B2926 /* UsersTableViewController.swift */,
+				6713CBC521E70C9800FD70D3 /* FeedTableViewController.swift */,
+				6713CBC721E70CA600FD70D3 /* FeedTableViewCell.swift */,
 				67466F3721E2105C001B3278 /* Main.storyboard */,
 				67466F3A21E21060001B3278 /* Assets.xcassets */,
+				6713CBC321E70B8900FD70D3 /* ML and AI.png */,
 				67466F3C21E21060001B3278 /* LaunchScreen.storyboard */,
 				67466F3F21E21060001B3278 /* Info.plist */,
 			);
@@ -156,6 +165,7 @@
 			files = (
 				67466F3E21E21060001B3278 /* LaunchScreen.storyboard in Resources */,
 				67466F3B21E21060001B3278 /* Assets.xcassets in Resources */,
+				6713CBC421E70B8900FD70D3 /* ML and AI.png in Resources */,
 				67466F3921E2105C001B3278 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,7 +227,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				67F3E7A221E65C3200C3BD1C /* PostViewController.swift in Sources */,
+				6713CBC821E70CA600FD70D3 /* FeedTableViewCell.swift in Sources */,
 				67CD51EB21E4CBFB006B2926 /* UsersTableViewController.swift in Sources */,
+				6713CBC621E70C9800FD70D3 /* FeedTableViewController.swift in Sources */,
 				67466F3621E2105C001B3278 /* ViewController.swift in Sources */,
 				67466F3421E2105C001B3278 /* AppDelegate.swift in Sources */,
 			);
