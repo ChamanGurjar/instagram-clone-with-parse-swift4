@@ -40,7 +40,7 @@ class UsersTableViewController: UITableViewController {
                     if let userName = user.username, let userId = user.objectId {
                         self.users.append(userName.components(separatedBy: "@")[0])
                         self.objectIds.append(userId)
-                        print("Saving User and userID")
+                        //print("Saving User and userID")
                         self.getFollowingData(userId)
                     }
                 }
@@ -62,10 +62,10 @@ class UsersTableViewController: UITableViewController {
         query.findObjectsInBackground(block: { (fetchedObjects, error) in
             if let objects = fetchedObjects {
                 if objects.isEmpty {
-                    print("\(userId) NotFollowing and \(self.isFollowing.count)")
+                   // print("\(userId) NotFollowing and \(self.isFollowing.count)")
                     self.isFollowing[userId] = false
                 } else {
-                    print("\(userId) Following and \(self.isFollowing.count)")
+                   // print("\(userId) Following and \(self.isFollowing.count)")
                     self.isFollowing[userId] = true
                 }
                 
@@ -112,8 +112,8 @@ extension UsersTableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "userCell", for: indexPath)
         cell.textLabel?.text = users[indexPath.row]
-        print("User \(users[indexPath.row])")
-        print("Finding for \([objectIds[indexPath.row])")
+        //print("User \(users[indexPath.row])")
+        //print("Finding for \([objectIds[indexPath.row])")
         if let followingUser = isFollowing[objectIds[indexPath.row]] {
             if followingUser {
                 cell.accessoryType = .checkmark
